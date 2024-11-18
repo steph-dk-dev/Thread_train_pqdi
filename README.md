@@ -7,8 +7,11 @@ Le sémaphore a été inventé par Edsger Dijkstra et utilisé pour la première
 Les deux circulent dans des sens contraires, il faut donc mettre en place un système de gestion de circulation afin d’éviter le télescopage des deux trains.
 En effet, dans leurs déplacements, ils vont utiliser le même tronçon de voie entre les points A et B.
 
-Proposer une solution mettant en œuvre un sémaphore.
+
 ![image](https://github.com/user-attachments/assets/53bfa548-c088-4146-97a2-283b7f11366c)
+
+
+Proposer une solution mettant en œuvre un sémaphore.
 
 Compléments sur les threads
 
