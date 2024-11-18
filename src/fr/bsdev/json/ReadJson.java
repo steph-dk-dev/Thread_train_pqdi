@@ -25,9 +25,9 @@ public class ReadJson {
 		List<ObjectTrain> listTrain = new ArrayList<ObjectTrain>();
 		
 		FileReader reader;
-		//Path path = Paths.get(filename);
-		
-		Path path = Paths.get(new Myfile().getRealPath(filename));
+		Path path = Paths.get(filename);
+		// redefinir la class MyFile
+		//Path path = Paths.get(new Myfile().getRealPath(filename));
 		
 		String realPath =null;
 		File file = null;
