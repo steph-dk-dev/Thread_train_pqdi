@@ -1,0 +1,19 @@
+{
+	"train":[
+	{
+		"name":"Thomas",
+	 	"style":"*",
+	 	"color":"INVERSEMAGENTA",
+	 	"speedMin":250,
+	 	"speedTunnelMin":1000
+	 },
+	 {
+		"name":"Edward",
+	 	"style":"+",
+	 	"color":"INVERSEGREEN",
+	 	"speedMin":500,
+	 	"speedTunnelMin":1000
+	 }
+	
+	]
+}
