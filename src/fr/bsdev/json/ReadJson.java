@@ -16,6 +16,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import fr.bsdev.beans.ObjectTrain;
+import fr.bsdev.structures.Tuple;
 
 public class ReadJson {
 
@@ -25,20 +26,11 @@ public class ReadJson {
 		List<ObjectTrain> listTrain = new ArrayList<ObjectTrain>();
 		
 		FileReader reader;
-		Path path = Paths.get(filename);
-		// redefinir la class MyFile
-		//Path path = Paths.get(new Myfile().getRealPath(filename));
-		
-		String realPath =null;
-		File file = null;
-		System.out.println("path"+path);
 		try {
-			
-			realPath = path.toRealPath().toString();
-			file = new File(realPath);
-			System.out.println("file :"+file.getAbsolutePath());
-			reader = new FileReader(filename);
-			char[] data = new char[(int)file.length()];
+	        
+			Tuple tr =  Myfile.getReader(filename, false);
+			reader = (FileReader) tr.get(0);
+			char[] data = new char[(int) tr.get(1)];
 			int is = reader.read(data);
 			
 			JSONObject jsonobject = new JSONObject(new String(data));
@@ -85,6 +77,9 @@ public class ReadJson {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ErrorFile e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

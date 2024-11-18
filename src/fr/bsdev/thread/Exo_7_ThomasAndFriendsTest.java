@@ -12,14 +12,13 @@ public class Exo_7_ThomasAndFriendsTest {
 		
 		Exo_7_ThomasAndFriends rail = new Exo_7_ThomasAndFriends(1);
 		List<ObjectTrain> listTrain = ReadJson.getList();
-		for(ObjectTrain objt:listTrain) {
-			System.out.println(objt);
-		}
+		
+		//for(ObjectTrain objt:listTrain) {
+		//	System.out.println(objt);
+		//}
 		
 		int input = 3;
 		int output = 18;
-//		Train train_A = new Train(rail, input, output,"Thomas",150);
-//		Train train_B = new Train(rail, output, input,"Edward",100);
 		
 		Train train_A = new Train(rail, input, output,listTrain.get(0));
 		Train train_B = new Train(rail, output, input,listTrain.get(1));
