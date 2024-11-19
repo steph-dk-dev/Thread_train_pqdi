@@ -44,6 +44,9 @@ public class Myfile {
 			return new Tuple(file,file.getAbsolutePath(),(int)file.length());
 		} catch (IOException e) {
 			System.err.println("le chemin n'a pas été trouvé ...");
+			String nomFichier = Thread.currentThread().getContextClassLoader().getResource("filename").getFile();
+			File file = new File(nomFichier);
+			return new Tuple(file,file.getAbsolutePath(),(int)file.length());
 		} catch(NullPointerException np) {
 			System.err.println("le fichier n'existe pas ...");
 		}
