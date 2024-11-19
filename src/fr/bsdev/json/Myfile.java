@@ -85,5 +85,15 @@ public class Myfile {
 	}
 	
 	
+	public static void main(String[] args) {
+		
+		String filename ="json/trains.json";
+		//String nomFichier = Thread.currentThread().getContextClassLoader().getResource("filename").getFile();
+		System.out.println(Thread.currentThread().getContextClassLoader());
+		
+		
+	}
+	
+	
 
 }
