@@ -20,7 +20,7 @@ import fr.bsdev.structures.Tuple;
 
 public class ReadJson {
 
-	private static String filename="json/trains.json";
+	private static String filename="resources/json/trains.json";
 	
 	public static List<ObjectTrain> getList(){
 		List<ObjectTrain> listTrain = new ArrayList<ObjectTrain>();
@@ -37,7 +37,7 @@ public class ReadJson {
 			JSONArray jsonarray = jsonobject.getJSONArray("train");
 			
 			System.out.println("dimension :"+jsonarray.length());
-			for(int pt = 0;pt<jsonarray.length();pt++) {
+			for(int pt = 0;pt< jsonarray.length();pt++) {
 				
 				JSONObject subobject = jsonarray.getJSONObject(pt);
 				@SuppressWarnings("unchecked")
